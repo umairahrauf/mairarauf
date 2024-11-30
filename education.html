@@ -1,0 +1,341 @@
+<html>
+<head>
+  <title>mairarauf</title>
+  <link href="mystyle.css" type="text/css" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  background-image: url('bg page.gif');
+  margin: 0px;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 36.5px;
+  text-align: center;
+  background-image: url('bg header.png');
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 55px;
+}
+
+/* Navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #805381;
+  border-radius: 10px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(181, 62, 218);
+}
+
+/* Clock styling */
+.clock {
+   font-size: 15px;
+   font-weight: bold;
+   text-align: end;
+   padding: 0px 50px;
+   color: #ffffff; 
+}
+
+h2 {
+  text-align:end;
+  padding: 0px 35px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(181, 62, 218);
+}
+
+/*  Content styling */
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+  color: #540957;
+}
+
+.education-image {
+  width: 90%; /* Adjust the width as needed */
+  height: auto;
+  display: block; /* Ensure images are block-level elements */
+  margin: 0 auto; /* Center the images horizontally */
+}
+
+.text-content {
+  background-color: #f9e8fc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Center align text */
+}
+
+.text-content h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #2654aa;
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-content p {
+  font-size: 17px;
+  line-height: 1.6;
+  font-family: 'Courier New', Courier, monospace;
+  color: #000000;
+}
+
+/* Center align h1 and p */
+h1,p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 50px;
+}
+
+.white-line {
+  border: 1px solid white;
+  margin: 20px 0; 
+}
+
+/* friends section */
+table,tr,td{
+  border: transparent;
+  width: 10px;
+}
+
+.friends-section table {
+  width: 100%; /* Make the table fit the container */
+  border-collapse: collapse; /* Remove spacing between table cells */
+  margin: 0 auto; /* Center the table */
+}
+
+.friends-section td {
+  text-align: center;
+  padding: 5px; /* Add space around images */
+  width: 10px;
+  height: 10px;
+}
+
+.friends-section img {
+  width: 350px; 
+  height: 350px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.friends-section img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.friends-section h2 {
+  font-weight:bold ;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* Tetapan asas untuk gambar */
+.image-container {
+  display: inline-block;
+  overflow: hidden; 
+  border-radius: 10px; 
+}
+
+.hover-image {
+  width: 300px;
+  height: 300px; 
+  transition: transform 0.3s ease-in-out; 
+  border-radius: 10px;
+}
+
+.slay {
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slay img{
+  border-radius: 20px;
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: auto;
+}
+
+.slay img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: transparent;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="header">
+   <h1><p style="color: #ffffff;">Umairah's Website</h1>
+    <p style="color: #ffffff; font-size: 15px;"><marquee>Snapshots of My World ❤️❤️❤️</marquee></p>
+  </div>
+<div class="topnav">
+  <a href="about me.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family</a>
+  <a href="experience.html">Experience</a>
+  <a href="contact.html">Contact</a>
+
+  <h2>Current Time</h2>
+  <div class="clock" id="clock"></div>
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0'); // Adds leading zero
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const time = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').textContent = time;
+      }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        // Initialize clock immediately when the page loads
+        updateClock();
+    </script>
+</div>
+
+<h1 class="main-content">𐙚🧸𐙚MY EDUCATION JOURNEY𐙚🧸𐙚</h1>
+<br><br>
+    <div class="content">
+        <div class="text-content">
+            <h2>Elementary Education: SK Serkam</h2>
+            <p>I experienced being a student at SK Serkam from the age of 7 to 9. I once held the position of assistant class leader and also school 
+              superintendent. This role taught me responsibility and leadership at an early age. During this time, I found joy in learning new subjects 
+              and actively participating in various school events and activities. These experiences shaped my early years, leaving me with precious memories and a strong foundation for future growth.</p>
+        </div>
+
+        <img class="education-image" src="skserkam.png" alt="SMK Dang Anum">
+        
+        <div class="text-content">
+            <h2>Elementary Education: SK Dato' Demang Hussin</h2>
+            <p>I have experience as a student at SK Dato' Demang Hussin from the age of 10 to 12. I once held the position of head library supervisor. This role taught me responsibility and leadership 
+              at an early age. I achieved UPSR achievement at the age of 12 with good and excellent results.</p>
+        </div>
+        <img class="education-image" src="skddh.png" alt="SMK Dang Anum">
+        
+        <div class="text-content">
+            <h2>Secondary Education: SMK Dang Anum</h2>
+            <p>I have experience as a student at SMK Dang Anum from the age of 13 to 17. I have held the position of peer supervisor. I achieved PT3 and SPM with good and excellent results.</p>
+        </div>
+        <img class="education-image" src="danganum.png" alt="SMK Dang Anum">
+        
+        <div class="text-content">
+            <h2>Tertiary Education: Universiti Teknologi MARA (UiTM)</h2>
+            <p>Currently pursuing a diploma in Information Management at UiTM. Growing in the information management program at UiTM, equipping myself with the skills to manage and organize information effectively.
+               Balancing studies and personal growth by learning to navigate the demands of university life while nurturing personal and professional development at UiTM. Contributing to a vibrant UiTM community.</p>
+          </div>
+          <img class="education-image" src="uitm.png" alt="UiTM">
+      </div>
+  </div>
+  <br>
+  <hr class="white-line">
+
+  <div class="friends-section">
+    <h1 class="title">💖 PICTURE <sub>WITH</sub> MY <sub>LOVELY</sub>FRIENDS 💖</sub></h1>
+      <div class="image container">
+          <table>
+            <tr>
+              <td><img src="pic15.jpg" class="hover image"></a></td>
+              <td><img src="pic14.jpg" class="hover image"></a></td>
+              <td><img src="pic18.jpg" class="hover image"></a></td>
+            </tr>
+            <tr>
+              <td><img src="pic16.jpg" class="hover image"></a></td>
+              <td><img src="pic17.jpg" class="hover image"></a></td>
+              <td><img src="pic20.jpg" class="hover image"></a></td>
+            </tr>
+            <tr>
+              <td><img src="pic19.jpg" class="hover image"></a></td>
+              <td><img src="pic22.jpg" class="hover image"></a></td>
+              <td><img src="pic21.jpg" class="hover image"></a></td>
+            </tr>
+            <tr>
+              <td><img src="pic24.jpg" class="hover image"></a></td>
+              <td><img src="pic23.jpg" class="hover image"></a></td>
+              <td><img src="pic25.jpg" class="hover image"></a></td>
+            </tr>
+            <tr>
+              <td><img src="pic37.jpg" class="hover image"></a></td>
+              <td><img src="pic36.jpg" class="hover image"></a></td>
+              <td><img src="pic38.jpg" class="hover image"></a></td>
+            </tr>
+          </table>
+      </div>
+  </div>
+  </div>
+
+  <div class="slay">
+    <img src="pic45.jpg">
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p style="color: #ffffff; font-size: 15px;">©2024 Nurul Umairah. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

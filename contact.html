@@ -1,0 +1,293 @@
+<html>
+<head>
+  <title>mairarauf</title>
+  <link href="mystyle.css" type="text/css" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  background-image: url('bg page.gif');
+  margin: 0px;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+
+/* Header */
+.header {
+  padding: 29px;
+  text-align: center;
+  background-image: url('bg header.png');
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 55px;
+}
+
+/* Navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #805381;
+  border-radius: 10px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(181, 62, 218);
+}
+
+/* Clock styling */
+.clock {
+   font-size: 15px;
+   font-weight: bold;
+   text-align: end;
+   padding: 0px 50px;
+   color: #ffffff; 
+}
+
+h2 {
+  text-align:end;
+  padding: 0px 35px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(181, 62, 218);
+}
+
+ /* Main content styles */
+ .main-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+}
+
+ .left-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.right-content {
+  flex: 2;
+  padding: 20px;
+  background-color: rgb(237, 188, 247);
+  border-radius: 10px;
+}
+
+/* Form styling */
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact-left-title h2{
+  font-weight: 600;
+  color: #19186d69;
+  font-size: 1000px;
+  margin-bottom: 5px;
+}
+
+.contact-inputs{
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #1a3797;
+  border-radius: 50px;
+}
+
+.contact-left textarea{
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+
+.contact-inputs:focus{
+  border: 2px solid #4a34c5  ;
+}
+
+.contact-inputs::placeholder{
+  color: #5b5ccc;
+}
+
+.contact-right button{
+  width: 400px;
+  height: 50px;
+  border: none;
+  margin: auto;
+  display: block;
+  outline: none;
+  padding: 0;
+  font-weight: 500;
+  color: #1a3797;
+  border-radius: 50px;
+  background: linear-gradient(to right, #80295e, #e2bbd169);
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-right button:hover {
+  background: linear-gradient(to right, #4a34c5, #ff99ee);
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Social Media */
+.social-media {
+  text-align: center;
+  color: #000;
+  background: #edbcf7; 
+  padding: 15px;
+  border-radius: 10px; /* Optional: Add rounded corners for style */
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background:transparent;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="header">
+   <h1><p style="color: #ffffff;">Umairah's Website</h1>
+    <p style="color: #ffffff; font-size: 15px;"><marquee>Snapshots of My World ❤️❤️❤️</marquee></p>
+  </div>
+<div class="topnav">
+  <a href="about me.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family</a>
+  <a href="experience.html">Experience</a>
+  <a href="contact.html">Contact</a>
+
+  <h2>Current Time</h2>
+  <div class="clock" id="clock"></div>
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0'); // Adds leading zero
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const time = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').textContent = time;
+      }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        // Initialize clock immediately when the page loads
+        updateClock();
+    </script>
+</div>
+
+
+<script>
+    function sendEmail() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var message = document.getElementById("message").value;
+        var subject = "Contact Form Submission from " + name;
+        var body = "Name: " + name + "%0D%0AEmail: " + email + "%0D%0AMessage: " + message;
+        window.location.href = "mailto:maiyerarauf@gmail.com?subject=" + subject + "&body=" + body;
+    }
+</script>
+</head>
+<body>
+
+<div class="main-content">
+    <div class="left-content">
+        <a href="pic3.jpg"><img src="pic3.jpg" alt="Umairah"></a>
+    </div>
+
+<div class="right-content">
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact-right">
+    <div class="contact-left-title">
+      <p style="text-align: center; color: #1a3797;"><b>Email Me!!!</b></u></p>
+      <hr>
+    </div>
+      <input type="hidden" name="access_key" value="4907a180-4554-4729-941c-b6385d5be6b1">
+      <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+      <input type="email" name="name" placeholder="Your Email" class="contact-inputs" required>
+      <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+      <button type="submit">Submit!</button>
+  </form>
+
+<div class="contact-info">
+        <p style="text-align: center; color: #1a3797"><b>Get in Touch</b></p>
+        <hr>
+        <p style="text-align: center;">Email: <a href="mailto:maiyerarauf@gmail.com">maiyerarauf@gmail.com</a></p>
+        <p style="text-align: center;">Phone: <a href="tel:+601114512660">+60 13-557 3662</a></p>
+        <p style="text-align: center;">Address: 4,Jalan Si 30,Taman Saujana Indah,75450 Bukit Katil,Melaka.</p>
+</div>
+
+<div class="social-media">
+  <p style="text-align: center; color: #1a3797"><b>Follow Me!</b></p>
+  <hr>
+  <a href="https://www.instagram.com/itsmairaaaaaaaa/" target="_blank"><img src="Ig icon.png" alt="maira instagram" style="width:42px;height:42px;"></a>
+  <a href="https://x.com/nrlumrhrf_" target="_blank"><img src="X icon.png" alt="maira x" style="width:42px;height:42px;"></a>
+  <a href="https://www.youtube.com/@mairarauf_02" target="_blank"><img src="Youtube icon.png" alt="maira youtube" style="width:42px;height:42px;"></a>
+  <a href="https://www.tiktok.com/@maiiyaaaaaaaaaaa?lang=en" target="_blank"><img src="Tiktok icon.png" alt="maira tiktok" style="width:42px;height:42px;"></a>
+</div>
+</div>
+</div>
+
+<div class="footer">
+  <footer>
+      <p style="color: #ffffff;">©2024 Nurul Umairah. All Rights Reserved.</p>
+  </footer>
+</div>
+
+</body>
+</html>

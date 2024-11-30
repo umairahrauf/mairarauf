@@ -1,0 +1,317 @@
+<html>
+<head>
+  <title>mairarauf</title>
+  <link href="mystyle.css" type="text/css" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  background-image: url('bg page.gif');
+}
+
+
+/* Header */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-image: url('bg header.png');
+  border-radius: 10px;
+}
+
+.header h1 {
+  font-size: 55px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #805381;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* Clock styling */
+.clock {
+   font-size: 15px;
+   font-weight: bold;
+   text-align: end;
+   padding: 0px 50px;
+   color: #ffffff; /* Customize the color */
+}
+
+h2 {
+  text-align:end;
+  padding: 0px 35px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(181, 62, 218);
+}
+
+.title {
+  font-size: 25px;
+  text-align: center;
+  color: #7082d1;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides  {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.paragraph {
+  background-color:rgba(255, 255, 255, 0.8) ;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: transparent;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="header">
+   <h1><p style="color: #ffffff;">Umairah's Website</h1>
+    <p style="color: #ffffff; font-size: 15px;"><marquee>Snapshots of My World ❤️❤️❤️</marquee></p>
+  </div>
+<div class="topnav">
+  <a href="about me.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family</a>
+  <a href="experience.html">Experience</a>
+  <a href="contact.html">Contact</a>
+
+  <h2>Current Time</h2>
+  <div class="clock" id="clock"></div>
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0'); // Adds leading zero
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const time = `${hours}:${minutes}:${seconds}`;
+        document.getElementById('clock').textContent = time;
+      }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+        // Initialize clock immediately when the page loads
+        updateClock();
+    </script>
+</div>
+
+<audio id="background-audio" autoplay loop>
+  <source src="Song 2.mp3" type="audio/mpeg">
+</audio>
+
+<div class="title">
+  <h1>✧˚ · .Experience as an Internship Students✧˚ · .</h1>
+</div>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 4</div>
+    <img src="pic26.jpg" style="width:100%">
+    <div class="text" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">I was awarded as an intern at the library during the farewell ceremony, marking the completion of my two-month internship.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 4</div>
+    <img src="pic27.jpg" style="width:100%">
+    <div class="text" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">Meeting with the library director and the unit head, along with the interns.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 4</div>
+    <img src="pic28.jpg" style="width:100%">
+    <div class="text" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">I participated in activities with primary school students at the 'Let's Go to the Alor Gajah District Library' event.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 4</div>
+    <img src="pic29.jpg" style="width:100%">
+    <div class="text" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 20px;">I do my work at the main counter of the Library.</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<br>
+<div class="paragraph">
+  <p style="color: #000000; font-family: Verdana, Geneva, Tahoma, sans-serif;"><b>This is my experience.</b></p>
+<br>
+<p style="color: #000000; font-family: Verdana, Geneva, Tahoma, sans-serif;" >So this is my experience as an intern at the Melaka Public Library Corporation for 2 months. This experience taught me to be an independent person and enhanced my ability to adapt to new environments. During my two-month internship at the Melaka Public Library Corporation, I was exposed to various tasks that helped me grow both personally and professionally.
+    I learned how to manage my time effectively, prioritize tasks, and work efficiently under minimal supervision. This role required attention to detail, especially when organizing materials and assisting patrons, which honed my organizational skills and taught me the importance of precision in a professional setting.</p>
+</div>
+
+  <footer>
+    <div class="footer">
+      <p style="color: #ffffff; font-size: 15px;">©2024 Nurul Umairah. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
