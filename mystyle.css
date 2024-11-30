@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px;
+  background-image: url('bg page.gif');
+  margin: 0px;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+
+/* Header */
+.header {
+  padding: 30px;
+  text-align: center;
+  background-image: url('bg header.png');
+}
+
+.header h1 {
+  font-size: 55px;
+}
+
+/* Navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #805381;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: flex;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 70px;
+  text-decoration: none;
+}
+
+/* Clock styling */
+.clock {
+   font-size: 15px;
+   font-weight: bold;
+   text-align: end;
+   padding: 0px 50px;
+   color: #ffffff; /* Customize the color */
+}
+
+h2 {
+  text-align:end;
+  padding: 0px 35px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+ /* Slideshow container */
+ .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+ /* Next & previous buttons */
+ .prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ffffff;
+  color: rgb(181, 62, 218);
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Calendar styling */
+#calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  top: -25px;
+  position: relative;
+}
+
+#calendar table {
+  border-collapse: collapse;
+  width: 80%; 
+  font-size: 12; 
+  text-align: center;
+  background-color: #debde2;
+  border: 1px solid #50144d;
+}
+
+#calendar th {
+  background-color: #805381;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#calendar td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Healing Station styling */
+.audio p {
+      color: #ffffff; /* Changed font color to white */
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 10px;
+      background-image: url('bg page.gif');
+    }
+
+    /* Social media links */
+    .social-media {
+      background-image: url('bg page.gif');
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+.icons {
+      display: inline-flex;
+      gap: 15px;
+    }
+
+.icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    /* Add a card effect for articles */
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  flex-wrap: wrap;
+  display: flex;
+  margin-bottom: 20px ;
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%; /* Adjust as necessary */
+    background-color: transparent; /* Remove white background */
+    padding-left: 15px; /* Optional: maintain spacing */
+}
+
+.card {
+    background-color: transparent; /* Remove background for cards */
+    border: none; /* Optional: remove borders if needed */
+    box-shadow: none; /* Remove shadow to avoid white box effect */
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-image: url('bg page.gif');
+  padding-left: 15px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: rgb(207, 151, 205);
+  margin-top: 20px;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
